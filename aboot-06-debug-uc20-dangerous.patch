@@ -1,0 +1,26 @@
+From 47291f4f1f5d3a395df941f969444b7b0fbdc113 Mon Sep 17 00:00:00 2001
+From: Ondrej Kubik <ondrej.kubik@canonical.com>
+Date: Thu, 15 Oct 2020 16:36:48 +0100
+Subject: [PATCH 8/9] ubuntu: debug: uc20: boot in dangerous mode
+
+Signed-off-by: Ondrej Kubik <ondrej.kubik@canonical.com>
+---
+ app/aboot/snappy_boot.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/app/aboot/snappy_boot.c b/app/aboot/snappy_boot.c
+index 5c2c5ffb..4ef08e8f 100644
+--- a/app/aboot/snappy_boot.c
++++ b/app/aboot/snappy_boot.c
+@@ -92,7 +92,7 @@ void snap_get_target_boot_params(const char **bootpart, const char **cmdline)
+         dprintf(INFO, "snap: get boot params: detected %s mode\n", recovery_mode );
+         snprintf(cmdline_buf,
+                  sizeof(cmdline_buf),
+-                 " snapd_recovery_mode=%s snapd_recovery_system=%s ",
++                 " snapd_recovery_mode=%s snapd_recovery_system=%s dangerous",
+                  recovery_mode,
+                  recovery_select->snapd_recovery_system);
+ 
+-- 
+2.26.2
+
