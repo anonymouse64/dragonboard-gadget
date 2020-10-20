@@ -75,6 +75,12 @@ parts:
         source: https://git.linaro.org/landing-teams/working/qualcomm/partioning_tool.git
         organize:
             LICENSE: LICENSE_for_ptool
+        override-pull: |
+          snapcraftctl pull
+          # patch ptool.py to understand our 'uc20_install_created' attribute
+          if ls ${SNAPCRAFT_PROJECT_DIR}/partioning-*.patch 1> /dev/null 2>&1; then
+              git apply ${SNAPCRAFT_PROJECT_DIR}/partioning-*.patch
+          fi
         prime:
             - -*
 

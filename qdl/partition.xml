@@ -30,9 +30,9 @@
        <partition label="boot_rb" size_in_kb="boot_rb-size" type="20117F86-E985-4357-B9EE-374BC1D8487D" bootable="false" readonly="true" />
        <partition label="boot_a" size_in_kb="boot_a-size" type="20117F86-E985-4357-B9EE-374BC1D8487D" bootable="false" readonly="true" />
        <partition label="boot_b" size_in_kb="boot_b-size" type="20117F86-E985-4357-B9EE-374BC1D8487D" bootable="false" readonly="true" />
-       <partition label="ubuntu-boot" size_in_kb="ubuntu-boot-size" type="0FC63DAF-8483-4772-8E79-3D69D8477DE4" bootable="false" readonly="false" sparse="true" />
+       <partition label="ubuntu-boot" size_in_kb="ubuntu-boot-size" type="0FC63DAF-8483-4772-8E79-3D69D8477DE4" bootable="false" uc20_install_created="true" readonly="false" sparse="true" />
        <partition label="ubuntu-seed" size_in_kb="ubuntu-seed-size" type="0FC63DAF-8483-4772-8E79-3D69D8477DE4" bootable="false" readonly="false" sparse="true" filename="ubuntu-seed.raw"/>
-       <partition label="ubuntu-data" size_in_kb="ubuntu-data-size" type="0FC63DAF-8483-4772-8E79-3D69D8477DE4" bootable="false" readonly="false" sparse="true" />
+       <partition label="ubuntu-data" size_in_kb="ubuntu-data-size" type="0FC63DAF-8483-4772-8E79-3D69D8477DE4" bootable="false" uc20_install_created="true" readonly="false" sparse="true" />
   </physical_partition>
 
 </configuration>
