@@ -73,7 +73,8 @@ fastboot flash snaprecoveryselbak snaprecoverysel.bin
 fastboot flash snapbootsel snapbootsel.bin
 fastboot flash snapbootselbak snapbootsel.bin
 fastboot flash ubuntu-seed ubuntu-seed.img
-fastboot format ubuntu-data
+fastboot format ubuntu-boot
+
 
 if [ "${REBOOT}" = "true" ]; then
   fastboot reboot

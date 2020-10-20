@@ -96,14 +96,20 @@ volumes:
         size: 31457280
         type: 20117F86-E985-4357-B9EE-374BC1D8487D
         role: system-boot-image
-      - name: ubuntu-seed
+      - name: ubuntu-boot
         offset: 135266304
+        filesystem: ext4
+        size: 10485760
+        type: 83,0FC63DAF-8483-4772-8E79-3D69D8477DE4
+        role: system-boot
+      - name: ubuntu-seed
+        offset: 145752064
         filesystem: ext4
         size: 500M
         type: 83,0FC63DAF-8483-4772-8E79-3D69D8477DE4
         role: system-seed
       - name: ubuntu-data
-        offset: 659554304
+        offset: 670040064
         filesystem: ext4
         size: 1G
         type: 83,0FC63DAF-8483-4772-8E79-3D69D8477DE4
